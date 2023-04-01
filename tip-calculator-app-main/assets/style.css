@@ -74,11 +74,19 @@ h4 {
     row-gap: 10px;
 }
 
+.span-padding {
+    padding-right: 5px;
+}
+
 input {
     width: 80%;
     border-radius: 10px;
     height: 30%;
+    text-align: right;
+    font-size: larger;
 }
+
+
 
 .tips {
     height: 3rem;
