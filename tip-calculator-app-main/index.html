@@ -2,79 +2,78 @@
 <html lang="en">
 
 <head>
+  <!-- Meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
+  <!-- Favicons, Fontawesome and CSS link -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <script src="https://kit.fontawesome.com/975999bef1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/style.css">
 
   <title>Frontend Mentor | Tip calculator app</title>
-
-
 </head>
 
 <body>
 
   <header>
+    <!-- Title Heading -->
     <h1> Splitter</h1>
   </header>
 
 
-
+  <!-- Main body of the calculator -->
   <div class="wrapper">
     <div class="row-1">
       <h4>Bill</h4>
-      <span class="span-padding"><i class="fa-solid fa-sterling-sign"></i></span><input type="number" min="0.00" placeholder="0">
+      <!-- Input amount of bill -->
+      <span class="span-padding"><i class="fa-solid fa-sterling-sign"></i></span><input id="amount-input" type="number"
+        min="0.00" placeholder="0">
     </div>
     <div class="row-2">
-
+      <!-- Percentage selection-->
       <h4>Select Tip %</h4>
       <div class="nested-grid">
-      <button class="tips">5%</button>
-      <button class="tips">10%</button>
-      <button class="tips">15%</button>
-      <button class="tips">25%</button>
-      <button class="tips">50%</button>
-      <button class="tips">Custom</button>
-    </div>
+        <button id="five-pc" class="tips">5%</button>
+        <button id="ten-pc" class="tips">10%</button>
+        <button id="fifteen-pc" class="tips">15%</button>
+        <button id="twentyfive-pc" class="tips">25%</button>
+        <button id="fifty-pc" class="tips">50%</button>
+        <input id="custom-pc" class="tips custom-tips" type="number" placeholder="Custom">
+      </div>
 
     </div>
 
     <div class="row-3">
       <h4>Number of People</h4>
-      <span class="span-padding"><i class="fa-solid fa-user"></i></span><input type="number" placeholder="0">
+      <!-- Input for number of people -->
+      <span class="span-padding"><i class="fa-solid fa-user"></i></span><input id="num-of-people" type="number"
+        placeholder="0">
     </div>
 
     <div class="total-col nested-grid-2">
 
       <div class="per-person">
+        <!-- Calculated tip amount per person-->
         Tip Amount
         / person
       </div>
 
-      <div class="first-amount">0.00</div>
-      
-      <div class="total-per-person">
-        Total
-      / person
-      </div>
-      
-      <div class="second-amount">0.00</div>
+      <div id="tip-counter" class="first-amount">0.00</div>
 
+      <div class="total-per-person">
+        <!-- Calculated total amount per person-->
+        Total
+        / person
+      </div>
+
+      <div id="total-counter" class="second-amount">0.00</div>
+      <!-- Reset button to set back to 0 -->
       <button class="reset" id="reset-btn">Reset</button>
 
     </div>
 
   </div>
-
-
-
-
-
-
-
 
   <!-- Bottom of the page -->
 
@@ -83,7 +82,7 @@
     Coded by <a href="#">Christian Brown</a>.
   </footer>
 
-
+<!-- External JS file -->
   <script src="./assets/script.js"></script>
 </body>
 

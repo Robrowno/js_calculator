@@ -24,7 +24,7 @@ h4 {
     padding-bottom: 1rem;
 }
 
-
+/* Main container of the calculator */
 .wrapper {
     padding: 10% 0;
     margin-top: 50px;
@@ -44,21 +44,25 @@ h4 {
     padding: 20px
 }
 
+/* First row of the calculator (first column)*/
 .row-1 {
     grid-column: 1 /2;
     grid-row: 1 / 2;
 }
 
+/* Second row of the calculator (first column*/
 .row-2 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 
+/* Third row of the calculator (first column*/
 .row-3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 }
 
+/*Total section in the second column*/
 .total-col {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
@@ -67,6 +71,7 @@ h4 {
     border-radius: 10px;
 }
 
+/* Grid of buttons nested in the first column*/
 .nested-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,6 +83,7 @@ h4 {
     padding-right: 5px;
 }
 
+/* General input field settings */
 input {
     width: 80%;
     border-radius: 10px;
@@ -87,7 +93,7 @@ input {
 }
 
 
-
+/* Percentage buttons*/
 .tips {
     height: 3rem;
     font-weight: 700;
@@ -96,6 +102,12 @@ input {
     border-radius: 10px;
 }
 
+/* Custom percentage input */
+input.custom-tips {
+    width: 100%;
+}
+
+/* Nested grid in the second column*/
 .nested-grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -108,6 +120,7 @@ input {
     grid-row: 1 / 2;
 }
 
+/* First row of calculated result */
 .first-amount {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -119,12 +132,14 @@ input {
     grid-row: 2 / 3;
 }
 
+/* Second row of calculated result*/
 .second-amount {
     grid-column: 2 / 3;
     grid-row:2 / 3;
     text-align: center;
 }
 
+/* Reset button */
 .reset {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
@@ -133,13 +148,12 @@ input {
     align-items: baseline;
 }
 
-/* Footer */
+/* Footer section */
 
 footer {
     position: fixed;
     bottom: 0;
 }
-
 
 .attribution { font-size: 11px; text-align: center; }
 
