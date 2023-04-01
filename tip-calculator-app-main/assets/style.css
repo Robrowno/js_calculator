@@ -1,4 +1,136 @@
 /* Calculator css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    padding-bottom: 1rem;
+}
+
+
+.wrapper {
+    padding: 10% 0;
+    margin-top: 50px;
+    display: grid;
+    margin: 0 auto;
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.2em;
+    grid-template-rows: repeat(3, 1fr);
+    background: white;
+    border-radius: 50px;
+}
+
+
+.wrapper > div {
+
+    padding: 20px
+}
+
+.row-1 {
+    grid-column: 1 /2;
+    grid-row: 1 / 2;
+}
+
+.row-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.row-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.total-col {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+input {
+    width: 80%;
+    border-radius: 10px;
+    height: 30%;
+}
+
+.tips {
+    height: 3rem;
+    font-weight: 700;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+.nested-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 2rem;
+}
+
+.per-person {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.first-amount {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.total-per-person {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.second-amount {
+    grid-column: 2 / 3;
+    grid-row:2 / 3;
+    text-align: center;
+}
+
+.reset {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    height: 30px;
+    border-radius: 50px;
+    align-items: baseline;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }

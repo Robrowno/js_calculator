@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/style.css">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
+
 </head>
+
 <body>
 
-  Bill
+  <header>
+    <h1> Splitter</h1>
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
 
-  Number of People
 
-  Tip Amount
-  / person
+  <div class="wrapper">
+    <div class="row-1">
+      <h4>Bill</h4>
+      <input type="number" min="0.00">
+    </div>
+    <div class="row-2">
 
-  Total
-  / person
+      <h4>Select Tip %</h4>
+      <div class="nested-grid">
+      <button class="tips">5%</button>
+      <button class="tips">10%</button>
+      <button class="tips">15%</button>
+      <button class="tips">25%</button>
+      <button class="tips">50%</button>
+      <button class="tips">Custom</button>
+    </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <div class="row-3">
+      <h4>Number of People</h4>
+      <input type="number">
+    </div>
+
+    <div class="total-col nested-grid-2">
+
+      <div class="per-person">
+        Tip Amount
+        / person
+      </div>
+
+      <div class="first-amount">0.00</div>
+      
+      <div class="total-per-person">
+        Total
+      / person
+      </div>
+      
+      <div class="second-amount">0.00</div>
+
+      <button class="reset" id="reset-btn">Reset</button>
+
+    </div>
+
   </div>
+
+
+
+
+
+
+
+
+  <!-- Bottom of the page -->
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Christian Brown</a>.
+  </footer>
+
 
   <script src="./assets/script.js"></script>
 </body>
+
 </html>
