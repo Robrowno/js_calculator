@@ -7,6 +7,7 @@ const totalAmount = document.querySelector('#total-counter')
 const tipPerPerson = document.querySelector('#tip-counter')
 
 const buttons = document.querySelectorAll('.tips')
+const customTip = document.querySelector('#custom-pc')
 const reset = document.getElementById('reset-btn')
 
 buttons.forEach(function (val) {
@@ -15,7 +16,8 @@ buttons.forEach(function (val) {
 
 billAmount.addEventListener('input', billInputCalc);
 numberOfPeople.addEventListener('input', peopleAmountHandler);
-
+customTip.addEventListener('input', customTipFunction);
+reset.addEventListener('click', resetCalculator);
 
 billAmount.value = "0.0";
 numberOfPeople.value = "1";
@@ -50,6 +52,15 @@ function handleButton(event) {
     calculateTip()
 };
 
+function customTipFunction() {
+    tipValue = parseFloat(customTip.value) / 100;
+
+    buttons.forEach(function(val) {
+        val.classList.remove('tip-active');
+    });
+    calculateTip()
+}
+
 
 function calculateTip() {
     if (peopleInputValue >= 1) {
@@ -62,3 +73,14 @@ function calculateTip() {
     }
 
 }
+
+
+function resetCalculator() {
+
+    billAmount.value = "0.0";
+    billInputCalc();
+    numberOfPeople.value = "1";
+    peopleAmountHandler();
+    customTip.value = "";
+}
+
