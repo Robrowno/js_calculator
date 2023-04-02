@@ -17,25 +17,26 @@ billAmount.addEventListener('input', billInputCalc);
 numberOfPeople.addEventListener('input', peopleAmountHandler);
 
 
-billAmount.value = "0.00";
+billAmount.value = "0.0";
 numberOfPeople.value = "1";
-totalAmount.innerHTML = (0.00).toFixed(2);
-tipPerPerson.innerHTML = (0.00).toFixed(2);
+
+totalAmount.innerHTML = (0.0).toFixed(2);
+tipPerPerson.innerHTML = (0.0).toFixed(2);
 
 
-let billValue = 0.00;
+let billValue = 0.0;
 let peopleInputValue = 1;
 let tipValue = 0.15;
 
 
 function billInputCalc() {
     billValue = parseFloat(billAmount.value);
-    console.log(billValue);
+    calculateTip()
 };
 
 function peopleAmountHandler() {
     peopleInputValue = parseFloat(numberOfPeople.value);
-    console.log(peopleInputValue);
+    calculateTip()
 };
 
 function handleButton(event) {
@@ -43,8 +44,21 @@ function handleButton(event) {
         val.classList.remove('tip-active');
         if (event.target.innerHTML === val.innerHTML){
         val.classList.add('tip-active');
-        tipValue = parseFloat(val.innerHTML)/100
+        tipValue = parseFloat(val.innerHTML) / 100;
         }
     });
-    console.log(tipValue)
+    calculateTip()
 };
+
+
+function calculateTip() {
+    if (peopleInputValue >= 1) {
+        let tipAmount = (billValue * tipValue ) / peopleInputValue;
+        let total = (billValue + tipAmount) / peopleInputValue;
+
+        tipPerPerson.innerHTML = tipAmount.toFixed(2);
+        totalAmount.innerHTML = total.toFixed(2);
+        
+    }
+
+}
