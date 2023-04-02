@@ -102,6 +102,18 @@ input {
     border-radius: 10px;
 }
 
+/* For when a button is hovered over */
+.tips:hover {
+    background-color: white;
+    color: blue;
+}
+
+/* For when a button is selected */
+.tip-active {
+    background-color: cyan;
+    color: black;
+}
+
 /* Custom percentage input */
 input.custom-tips {
     width: 100%;
@@ -155,6 +167,11 @@ footer {
     bottom: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    }
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+     color: hsl(228, 45%, 44%);
+    }
