@@ -97,6 +97,11 @@ input:hover {
     background-color: honeydew;
 }
 
+#error {
+    color: red;
+    font-weight: 700;
+}
+
 /* Percentage buttons*/
 .tips {
     height: 3rem;
