@@ -69,7 +69,9 @@ function calculateTip() {
 
         tipPerPerson.innerHTML = tipAmount.toFixed(2);
         totalAmount.innerHTML = total.toFixed(2);
-        
+    
+    } else {
+        validateInput();
     };
 };
 
@@ -83,3 +85,10 @@ function resetCalculator() {
     customTip.value = "";
 };
 
+function validateInput() {
+    if (peopleInputValue <= 0) {
+      document.getElementById("error").innerHTML = "Input must be greater than 0.";
+    } else {
+      document.getElementById("error").innerHTML = "";
+    }
+  }
