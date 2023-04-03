@@ -92,6 +92,10 @@ input {
     font-size: larger;
 }
 
+input:hover {
+    cursor: pointer;
+    background-color: honeydew;
+}
 
 /* Percentage buttons*/
 .tips {
@@ -106,6 +110,7 @@ input {
 .tips:hover {
     background-color: white;
     color: blue;
+    cursor: pointer;
 }
 
 /* For when a button is selected */
@@ -160,6 +165,11 @@ input.custom-tips {
     align-items: baseline;
 }
 
+.reset:hover {
+    cursor: pointer;
+    background: greenyellow;
+}
+
 /* Footer section */
 
 footer {
@@ -174,4 +184,25 @@ footer {
 
 .attribution a {
      color: hsl(228, 45%, 44%);
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+        .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 20% 20% 20% 40%;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .total-col {
+            grid-column: 1 / 2;
+            grid-row:  4 / 5;
+            margin: 0px 3px;
+        }
+
+        input.custom-tips {
+            font-size: smaller;
+        }
     }

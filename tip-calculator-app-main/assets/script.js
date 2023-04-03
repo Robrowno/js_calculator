@@ -3,12 +3,12 @@
 
 const billAmount = document.querySelector('#amount-input');
 const numberOfPeople = document.querySelector('#num-of-people');
-const totalAmount = document.querySelector('#total-counter')
-const tipPerPerson = document.querySelector('#tip-counter')
+const totalAmount = document.querySelector('#total-counter');
+const tipPerPerson = document.querySelector('#tip-counter');
 
-const buttons = document.querySelectorAll('.tips')
-const customTip = document.querySelector('#custom-pc')
-const reset = document.getElementById('reset-btn')
+const buttons = document.querySelectorAll('.tips');
+const customTip = document.querySelector('#custom-pc');
+const reset = document.getElementById('reset-btn');
 
 buttons.forEach(function (val) {
     val.addEventListener('click', handleButton);
@@ -47,7 +47,7 @@ function handleButton(event) {
         if (event.target.innerHTML === val.innerHTML){
         val.classList.add('tip-active');
         tipValue = parseFloat(val.innerHTML) / 100;
-        }
+        };
     });
     calculateTip()
 };
@@ -59,7 +59,7 @@ function customTipFunction() {
         val.classList.remove('tip-active');
     });
     calculateTip()
-}
+};
 
 
 function calculateTip() {
@@ -70,9 +70,8 @@ function calculateTip() {
         tipPerPerson.innerHTML = tipAmount.toFixed(2);
         totalAmount.innerHTML = total.toFixed(2);
         
-    }
-
-}
+    };
+};
 
 
 function resetCalculator() {
@@ -82,5 +81,5 @@ function resetCalculator() {
     numberOfPeople.value = "1";
     peopleAmountHandler();
     customTip.value = "";
-}
+};
 
